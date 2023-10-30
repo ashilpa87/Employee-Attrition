@@ -1,0 +1,20 @@
+
+
+
+ITMetrics.columns = ['Model', 'Accuracy', 'F1-Score']
+ITMetrics
+
+fig = plt.figure()
+ax = fig.add_axes([0,0,1,1])
+ax.bar(LogisticsMetrics['Model'], LogisticsMetrics['Accuracy'], color = 'g', width = 0.25)
+ax.plot(LogisticsMetrics['Model'], LogisticsMetrics['Accuracy'])
+ax.set_xticklabels(LogisticsMetrics.Model, rotation=45)
+plt.show()
+
+
+fig = plt.figure()
+ax = fig.add_axes([0,0,1,1])
+ax.bar(LogisticsMetrics['Model'], LogisticsMetrics['F1-Score'], color = 'g', width = 0.25)
+ax.plot(LogisticsMetrics['Model'], LogisticsMetrics['F1-Score'])
+ax.set_xticklabels(LogisticsMetrics.Model, rotation=45)
+plt.show()
